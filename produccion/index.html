@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parque Bar Botanico
+    </title>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="video bar.mp4" type="video/mp4">
+        </video>
+	</div>
+	<style type="text/css">
+		body {
+			background-image: url(fondo\ 2.jpg);
+			background-size: cover;
+		}
+		h1 {
+			text-align: center;
+			color: white;
+			font-size: 48px;
+			margin-top: 50px;
+		}
+		.barra {
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 10px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		.barra a {
+			color: white;
+			margin: 0 10px;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			transition: all 0.3s ease;
+		}
+		.barra a:hover {
+			color: #F7F4EF;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 100px;
+		}
+		.container div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 10px;
+		}
+		.container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+		}
+		.container p {
+			margin-top: 10px;
+			color: white;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.footer {
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+		.footer img {
+			height: 50px;
+			width: 50px;
+			margin: 0 10px;
+			transition: all 0.3s ease;
+		}
+		.footer img:hover {
+			transform: scale(1.2);
+		}
+	</style>
+</head>
+<body>
+	<div class="barra">
+		<a href="#">Menu</a>
+		<a href="#">Contacto</a>
+		<a href="#">Reservas</a>
+		<a href="#"> ¿Quienes somos? </a>
+	</div>
+	
+	<div class="container">
+		<div>
+			<img src="comidas.jpg">
+			<p>Comidas</p>
+		</div>
+		<div>
+			<img src="bebidas.jpg">
+			<p>Bebidas</p>
+		</div>
+		<div>
+			<img src="reservas.jpg">
+			<p>Reservas</p>
+		</div>
+	</div>
+	<div class="footer">
+		<img src="imagen_2023-04-26_235500661.png">
+		<img src="Instagram-Logo-PNG.png">
+		
+		
+	</div>
+</body>
+</html>

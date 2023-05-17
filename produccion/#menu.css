@@ -1,0 +1,66 @@
+body {
+  background-image: url(FONDOm.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.circle {
+  background-image: url('circulo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #032215;
+  color: white;
+  padding: 10px 20px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.drinks {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+  margin-top: 5vh;
+  font-size: 2rem;
+}
+
+.drink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.drink img {
+  width: 100%;
+  max-width: 300px;
+  color: aliceblue;
+}
+
+.drink h2 {
+  font-size: 2rem;
+  margin-top: 1vh;
+  color: aliceblue;
+}
+
+.drink p {
+  font-size: 1.5rem;
+  margin-top: 1vh;
+  color: aliceblue;
+}
+

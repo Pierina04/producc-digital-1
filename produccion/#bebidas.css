@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .circle {
+    background-image: url('circulo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: calc(50% - 50px);
+    height: 100vh;
+    position: absolute;
+    left: -25px;
+    top: 0;
+  }
+  
+  .title {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-top: 10vh;
+  }
+  
+  .drinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .drink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+  }
+  
+  .drink img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .drink h2 {
+    font-size: 2rem;
+    margin-top: 1vh;
+  }
+  
+  .drink p {
+    font-size: 1.5rem;
+    margin-top: 1vh;
+  }
+  

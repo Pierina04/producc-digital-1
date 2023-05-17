@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+ 
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(FONDOm.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .circle {
+        background-image: url(bebidas\ redondo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: calc(50% - 50px);
+        height: 100vh;
+        position: absolute;
+        left: -25px;
+        top: 0;
+      }
+
+      .title {
+        font-family: 'Noto Serif Display', serif;
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        margin-top: 10vh;
+      }
+
+      .drinks {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 5vh;
+        font-size: 2rem;
+        color: white;
+        margin-left: 25%;
+      }
+
+      .drink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vh;
+      }
+
+      .drink img {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .drink h2 {
+        font-size: 2rem;
+        margin-top: 1vh;
+      }
+
+      .drink p {
+        font-size: 1.5rem;
+        margin-top: 1vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+    <h1 class="title">BEBIDAS</h1>
+    <div class="drinks">
+      <div class="drink">
+        <img src="bebida1.jpg" alt="Bebida 1">
+        <h2>Bebida 1</h2>
+        <p>Descripción de la bebida 1</p>
+      </div>
+      <div class="drink">
+        <img src="bebida2.jpg" alt="Bebida 2">
+        <h2>Bebida 2</h2>
+        <p>Descripción de la bebida 2</p>
+      </div>
+      <div class="drink">
+        <img src="bebida3.jpg" alt="Bebida 3">
+        <h2>Bebida 3</h2>
+        <p>Descripción de la bebida 3</p>
+      </div>
+    </div>
+  </body>
+</html>

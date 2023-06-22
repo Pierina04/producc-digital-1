@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>NUESTRO MENÚ</title>
+  <style>
+    /* Estilos CSS */
+    .barra {
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 10px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		.barra a {
+			color: white;
+			margin: 40px;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			transition: all 0.3s ease;
+		}
+		.barra a:hover {
+			color: #F7F4EF;
+		}
+		.titulo{margin-left: 4%;
+		
+		}
+		.logo {
+			width: 200px;
+			height: auto;
+			align-items: center;
+			margin: auto;
+			
+		}
+	body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: antiquewhite;
+    }
+
+
+    header {
+      background-image:url(resources/fondo\ 2.jpg) ;
+	  background-color:antiquewhite;
+      color:white;
+      padding: 150px;
+      text-align: center;
+	  font-size: 25px;
+      font-family: monospace;
+	  
+    }
+	
+.title {
+	font-size: 50px;
+}
+	
+.container {
+      display: flex;
+      height: 90vh;
+    }
+
+    .form-container {
+      flex: 1;
+      background-image: url(resources/bebida2.png);
+      color:antiquewhite;
+      padding: 30px;
+      width: 100px;
+      height: 500px;
+      border-radius: 10px;
+      margin-top: 5%;
+    }
+
+
+
+    .reservation-form {
+      margin-bottom: 20px;
+    }
+
+    .reservation-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .reservation-form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    .reservation-form button {
+      background-color: #ff9800;
+      color: #fff;
+      padding: 10px 30px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 5pt;
+    }
+
+    .reservation-form button:hover {
+      transform: scale(1.1);
+    }
+    
+   /* Footer*/
+    * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer {
+    background-color: rgb(37, 66, 73);
+    padding: 40px 0;
+  }
+
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-links {
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  .footer-links h4 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #ff9900ff;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  .footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+  }
+
+  .footer-links ul li a:hover {
+    color: #FFFFFF;
+    padding-left: 6px;
+  }
+
+  .social-link a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all .5s ease;
+  }
+
+  .social-link a:hover {
+    background-color: #ff9900ff;
+  }
+  /* Media Queries */
+  @media (max-width: 480px) {
+            .barra {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .barra a {
+                margin: 10px;
+            }
+
+            .container img {
+                width: 100%;
+                height: auto;
+            }
+
+            .menu-hamburguesa {
+                display: block;
+            }
+
+            .menu-hamburguesa .linea {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
+
+            .menu-hamburguesa .linea.active {
+                transform: rotate(45deg);
+            }
+
+            .menu-hamburguesa .linea:nth-child(2).active {
+                opacity: 0;
+            }
+
+            .menu-hamburguesa .linea:nth-child(3).active {
+                transform: rotate(-45deg);
+            }
+
+            .menu-contenido {
+                display: none;
+                margin-top: 20px;
+            }
+
+            .menu-contenido a {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-contenido.active {
+                display: block;
+            }
+          }
+  </style>
+</head>
+<body>
+	<div class="barra">
+    <div class="titulo">
+        <a href="index.html"><img class="logo" src="resources/logo.png" ></a>
+    </div>
+    <div class="menu-hamburguesa">
+        <div class="linea"></div>
+        <div class="linea"></div>
+        <div class="linea"></div>
+    </div>
+    <div class="menu-contenido">
+        <a href="menu.html">Menú</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="quienesomos.html">¿Quienes somos?</a>
+    </div>
+</div>
+  <header>
+    <h1>RESERVAS</h1>
+  </header>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Reserva en nuestro bar</h2>
+      <div class="reservation-form">
+        <label for="name">Nombre y Apellido:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="date">Fecha de reserva:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="time">Hora de reserva:</label>
+        <input type="time" id="time" name="time" required>
+        <label for="people">Cantidad de personas:</label>
+        <input type="number" id="people" name="people" required>
+        <button type="submit">Reservar</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-row">
+        
+        <div class="footer-links">
+
+          <h4> PARQUE BAR</h4>
+          <ul>
+            <li> <a href="quienesomos.html"> Nosotros </a> </li>
+           
+            <li> <a href="c"> Unete a nosotros </a> </li> 
+
+          </ul>
+        </div>
+
+        <div class="footer-links">
+
+          <h4> AYUDA</h4>
+          <ul>
+            <li> <a href="#"> Preguntas </a> </li>
+            <li> <a href="#"> Compras </a> </li>
+            <li> <a href="#"> envios </a> </li>
+            <li> <a href="#"> Estado de pedido </a> </li> 
+            <li> <a href="#"> Pago</a> </li> 
+
+          </ul>
+        </div>
+
+        <div class="footer-links">
+
+          <h4> BAR</h4>
+          <ul>
+            <li> <a href="#"> Como llegar </a> </li>
+            
+            <li> <a href="#"> Contacto </a> </li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+
+          <h4> Seguínos</h4>
+          <div class="social-link">
+            <a href="https://www.facebook.com/ParqueBarBotanico/?locale=es_LA"> <i class="fab fa-facebook-f"> </i> </a>
+            <a href="https://www.instagram.com/parquebar.ba/"> <i class="fab fa-instagram"> </i> </a>
+            
+          
+          </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <script>
+    const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+    const menuContenido = document.querySelector('.menu-contenido');
+
+    menuHamburguesa.addEventListener('click', function() {
+        this.classList.toggle('active');
+        menuContenido.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

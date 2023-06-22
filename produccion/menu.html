@@ -1,127 +1,303 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	
-	
-	<style>
-		body {
-			background-image: url(FONDOm.jpeg);
-			background-size: cover;
-			background-position: center center;
-		}
-		.barra {
-			background-color: rgba(0, 0, 0, 0.5);
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			padding: 10px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 1;
-		}
-		.barra a {
-			color: white;
-			margin: 0 10px;
-			text-decoration: none;
-			font-size: 18px;
-			font-weight: bold;
-			transition: all 0.3s ease;
-		}
-		.barra a:hover {
-			color: #F7F4EF;
-		}
-		.circle-image {
-			background-image: url(especialidades.png);
-			background-size: contain;
-			background-position: left center;
-			background-repeat: no-repeat;
-			width: 45%;
-			height: 100vh;
-			position: fixed;
-			left: 0;
-			top: 0;
-		}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>NUESTRO MENÚ</title>
+  <style>
+    /* Estilos CSS */
+    .barra {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .barra a {
+      color: white;
+      margin: 40px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .barra a:hover {
+      color: #F7F4EF;
+    }
+    .titulo {
+      margin-left: 4%;
+    }
+    .logo {
+      width: 200px;
+      height: auto;
+      align-items: center;
+      margin: auto;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-image: url(resources/fondo%202.jpg);
+      background-color: #333;
+      color: #fff;
+      padding: 150px;
+      text-align: center;
+      font-size: 25px;
+      font-family: monospace;
+    }
+    .title {
+      font-size: 50px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .specialty {
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .specialty img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .specialty p {
+      margin-top: 10px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer {
+      background-color: rgb(37, 66, 73);
+      padding: 40px 0;
+    }
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .footer-links {
+      width: 25%;
+      padding: 0 15px;
+    }
+    .footer-links h4 {
+      font-size: 20px;
+      color: #FFFFFF;
+      margin-bottom: 25px;
+      font-weight: 500;
+      border-bottom: 2px solid #ff9900ff;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+    .footer-links ul li a {
+      font-size: 18px;
+      text-decoration: none;
+      color: #BBBBBB;
+      display: block;
+      margin-bottom: 15px;
+      transition: all .3s ease;
+    }
+    .footer-links ul li a:hover {
+      color: #FFFFFF;
+      padding-left: 6px;
+    }
+    .social-link a {
+      display: inline-block;
+      min-height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #FFFFFF;
+      transition: all .5s ease;
+    }
+    .social-link a:hover {
+      background-color: #ff9900ff;
+    }
 
-		.heading {
-			font-size: 4rem;
-			font-weight: bold;
-			text-align:end;
-			margin-top: 10vh;
-			color:#F7F4EF;
-			margin-right: 3%;
-		}
+    /* Media Queries */
+    @media (max-width: 480px) {
+            .barra {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
 
-		.drinks {
-			display: flex;
-			flex-direction: column;
-			align-items:center;
-			margin-left: 45%;
-			margin-top: 5vh;
-			font-size: 2rem;
-			color: #F7F4EF;
-		}
+            .barra a {
+                margin: 10px;
+            }
 
-		.drink {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-top: 3vh;
-			color: #F7F4EF;
-		}
+            .container img {
+                width: 100%;
+                height: auto;
+            }
 
-		.drink img {
-			width: 100%;
-			max-width: 300px;
-			
-		}
+            .menu-hamburguesa {
+                display: block;
+            }
 
-		.drink h2 {
-			font-size: 2rem;
-			margin-top: 1vh;
-			
-		}
+            .menu-hamburguesa .linea {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
 
-		.drink p {
-			font-size: 1.5rem;
-			margin-top: 1vh;
-		}
-	</style>
+            .menu-hamburguesa .linea.active {
+                transform: rotate(45deg);
+            }
+
+            .menu-hamburguesa .linea:nth-child(2).active {
+                opacity: 0;
+            }
+
+            .menu-hamburguesa .linea:nth-child(3).active {
+                transform: rotate(-45deg);
+            }
+
+            .menu-contenido {
+                display: none;
+                margin-top: 20px;
+            }
+
+            .menu-contenido a {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-contenido.active {
+                display: block;
+            }
+            @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .specialty {
+        width: 100%;
+      }
+          }
+        }
+  </style>
 </head>
 <body>
-	<div class="barra">
-		<a href="menu.html">Nuestras especialidades</a>
-		<a href="contacto.html">Contacto</a>
-		<a href="reservas.html">Reservas</a>
-		<a href="¿quienes somos?.html"> ¿Quienes somos?</a>
-	</div>
-	<div class="container">
-		<div>
-	<div class="circle-image"></div>
-	<div class="heading">NUESTRAS ESPECIALIDADES</div>
-	<div class="drinks">
-		<div class="drink">
-			
-			<h2>TROPICAL TONIC</h2>
-			<p>Gin Gordons, Vodka Sernova tropical passion, almibar de lemon grass y tonica
+  <div class="barra">
+    <div class="titulo">
+        <a href="index.html"><img class="logo" src="resources/logo.png" ></a>
+    </div>
+    <div class="menu-hamburguesa">
+        <div class="linea"></div>
+        <div class="linea"></div>
+        <div class="linea"></div>
+    </div>
+    <div class="menu-contenido">
+        <a href="menu.html">Menú</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="quienesomos.html">¿Quienes somos?</a>
+    </div>
+</div>
+  <header>
+    <h1>NUESTRO MENÚ</h1>
+  </header>
 
-			</p>
-		</div>
-		<div class="drink">
-			
-			<h2>PARQUE TAYRONA</h2>
-			<p>Ron Flor de caña, almibar de coco tostado, jugo de naranja, maracuya y limon</p>
-		</div>
-		<div class="drink">
-		
-			<h2>MAI TAI</h2>
-			<p>Ron Appleton State, Hesperidina,Orgeat, jugo de limon.</p>
-		</div>
-	</div>
-</body>
-</html>
-
-
+  <div class="container">
+    <div class="specialty">
+      <img src="resources/bebida1.png" alt="Especialidad 1">
+      <p>Vodka Absolut, Vino Torrontes, jugo de arandanos y licor Cherry Brandy.</p>
+    </div>
+    <div class="specialty">
+      <img src="resources/bebida2.png" alt="Especialidad 2">
+      <p>Vodka Absolut, solucion citrica, almibar simple, licor elder flowers y Vino Malbec.</p>
+    </div>
+    <div class="specialty">
+      <img src="resources/bebida3.png" alt="Especialidad 3">
+      <p>Ron Flor de Caña, jugo de limón, Donn´s Mix (almibar de canela, jugo de pomelo), almibar de frutos rojos y Absenta, bitter Angostura.</p>
+    </div>
+    <div class="specialty">
+      <img src="resources/bebida4.png" alt="Especialidad 4">
+      <p>Ron Appleton State, Hesperidina, Orgeat y Jugo de limon.</p>
+    </div>
+  </div>
   
+  <div class="container">
+    <div class="specialty">
+      <img src="resources/comida1.jpg" alt="Especialidad 1">
+      <p>Medallon de 200gr, tomate, lechuga, cheddar, pickles de pepino y cebolla.</p>
+    </div>
+    <div class="specialty">
+      <img src="resources/comida2.png" alt="Especialidad 2">
+      <p>Descripción breve de la especialidad 2</p>
+    </div>
+    <div class="specialty">
+      <img src="resources/comida3.png" alt="Especialidad 3">
+      <p>Descripción breve de la especialidad 3</p>
+    </div>
+    <div class="specialty">
+      <img src="resources/comida4.png" alt="Especialidad 4">
+      <p>Descripción breve de la especialidad 4</p>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-links">
+          <h4>PARQUE BAR</h4>
+          <ul>
+            <li><a href="quienesomos.html">Nosotros</a></li>
+            
+            
+            <li><a href="contacto.html">Únete a nosotros</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>BAR</h4>
+          <ul>
+            <li><a href="contacto.html">Cómo llegar</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Síguenos</h4>
+          <div class="social-link">
+            <a href="https://www.facebook.com/ParqueBarBotanico/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/parquebar.ba/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+    const menuContenido = document.querySelector('.menu-contenido');
+
+    menuHamburguesa.addEventListener('click', function() {
+        this.classList.toggle('active');
+        menuContenido.classList.toggle('active');
+    });
+</script>
+</body>
+</html
+
